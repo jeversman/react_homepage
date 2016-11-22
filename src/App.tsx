@@ -2,24 +2,17 @@ import * as React from 'react';
 import {Router, Route, hashHistory, Link} from 'react-router';
 
 import {MainPage} from './components/main-page';
-import {FirstScreen} from "./components/FirstScreen";
-import {SecondScreen} from "./components/SecondScreen";
+import {NewProfile} from "./components/NewProfile";
+import {Profiles} from "./components/Profiles";
 
-const Links = () =>
-    <nav>
-        <Link to="/FirstScreen"> First </Link>
-        <Link to="/SecondScreen"> Second </Link>
-    </nav>
-
-export class App extends React.Component {
+export default class App extends React.Component {
     render() {
         return (
             <div>
-                <Links/>
                 <Router history={hashHistory}>
-                    <Route path="/" component={MainPage}></Route>
-                    <Route path="/FirstScreen" component={FirstScreen}></Route>
-                    <Route path="/SecondScreen" component={SecondScreen}></Route>
+                    <Route path='/' component={MainPage}></Route>
+                    <Route path="/NewProfile" component={NewProfile}></Route>
+                    <Route path="/Profiles" component={Profiles}></Route>
                 </Router>
             </div>
         );

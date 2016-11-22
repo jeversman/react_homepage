@@ -1,11 +1,3 @@
 {
-  "compilerOptions": {
-    "outDir": "./src",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es5",
-    "jsx": "preserve"
-  },
-  "files": []
+
 }

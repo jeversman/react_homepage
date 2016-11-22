@@ -14,10 +14,10 @@ module.exports = {
                 // loader: 'react-hot!babel'
                 loader: 'babel-loader'
             }
-        ],
+        ]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx', '.ts', '.tsx']
+        extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.ts', '.tsx']
     },
     output: {
         path: __dirname + '/dist',
