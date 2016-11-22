@@ -14,8 +14,8 @@ class ProfilesComponent extends Component {
 
                 <ul>
                     {
-                        this.props.profiles.map(function (profile) {
-                            <li> sdfsdfsdf </li>
+                        this.props.profiles.map(function(profile) {
+                            return <li> {profile.name} </li>
                         })
                     }
                 </ul>
