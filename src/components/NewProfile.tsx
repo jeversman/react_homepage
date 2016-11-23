@@ -9,15 +9,14 @@ import NewProfileForm from './NewProfileForm';
 import * as actions from './../actions';
 
 class NewProfileComponent extends Component {
-
     render() {
         return (
             <div>
                 <NavigationBar/>
                 <h1> New Profile Screen! </h1>
-
+    
                 <NewProfileForm onSubmit={this.props.addProfile} />
-
+    
             </div>
         );
     }

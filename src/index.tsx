@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 import { createStore, combineReducers } from 'redux'
 import { reducer as formReducer } from 'redux-form'
 import {Provider} from 'react-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import myReducer from './reducers/reducer';
 
@@ -18,7 +19,9 @@ const store = createStore(reducer);
 
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <MuiThemeProvider>
+            <App/>
+        </MuiThemeProvider>
     </Provider>,
     document.getElementById('app')
 );
