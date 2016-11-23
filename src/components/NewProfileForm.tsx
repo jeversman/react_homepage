@@ -12,6 +12,9 @@ const inputName = ({input}) => (
         hintText="name"
         floatingLabelText="Name"
         type="text"
+        style={{
+            width: '25%'
+        }}
         {...input}
     />
 );
@@ -21,17 +24,22 @@ const inputParam1 = ({input}) => (
         hintText="param 1"
         floatingLabelText="Param 1"
         type="number"
+        style={{
+            width: '25%'
+        }}
         {...input}
-
     />
 );
 
 const param2Slider = () => (
-    <div width="">
+    <div>
         <Slider
             min={0}
-            max={100}
-            step={1}
+            max={10}
+            step={0.1}
+            style={{
+                width: '25%'
+            }}
         />
     </div>
 );
