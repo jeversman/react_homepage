@@ -75,3 +75,10 @@ class NewProfileForm extends React.Component {
 export default NewProfileForm = reduxForm({
     form: 'newProfile'
 })(NewProfileForm);
+
+/*
+ - сделать кнопку красивой
+ - получать значение слайдера и записывать его в профиль
+ - отображать профили красивым списком и вместе с параметрами
+ - сделать кнопки сверху красивыми
+ */
