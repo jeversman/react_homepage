@@ -1,11 +1,11 @@
 // import * as React from 'react';
 import React, {Component} from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, filterProps} from 'redux-form';
 import Slider from 'material-ui/Slider';
 
 import mui from 'material-ui';
 import TextField from 'material-ui/TextField';
-import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const inputName = ({input}) => (
     <TextField
@@ -31,15 +31,17 @@ const inputParam1 = ({input}) => (
     />
 );
 
-const param2Slider = () => (
+const param2Slider = ({input}) => (
     <div>
         <Slider
+            defaultValue={0}
             min={0}
             max={10}
             step={0.1}
             style={{
                 width: '25%'
             }}
+            value={input.value}
         />
     </div>
 );
@@ -61,11 +63,11 @@ class NewProfileForm extends React.Component {
                 </div>
 
                 <div>
-                    <Field component={param2Slider} />
+                    <Field name="param2" component={param2Slider} value={0} />
                 </div>
 
                 <div>
-                    <button type="submit">Submit</button>
+                    <RaisedButton type="submit" label="submit" primary={true} />
                 </div>
             </form>
         );
@@ -77,8 +79,5 @@ export default NewProfileForm = reduxForm({
 })(NewProfileForm);
 
 /*
- - сделать кнопку красивой
  - получать значение слайдера и записывать его в профиль
- - отображать профили красивым списком и вместе с параметрами
- - сделать кнопки сверху красивыми
  */

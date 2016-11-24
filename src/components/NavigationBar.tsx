@@ -1,13 +1,15 @@
 import * as React from 'react';
 import {Component, PropTypes} from 'react';
 
+import {RaisedButton} from 'material-ui';
+
 export class NavigationBar extends Component {
 
     render() {
         return (
             <div>
-                <button onClick={() => this.handleClick(this, 'NewProfile')}> New Profile </button>
-                <button onClick={() => this.handleClick(this, 'Profiles')}> Profiles </button>
+                <RaisedButton style={{margin: '5px'}} onClick={() => this.handleClick(this, 'NewProfile')}> New Profile </RaisedButton>
+                <RaisedButton style={{margin: '5px'}} onClick={() => this.handleClick(this, 'Profiles')}> Profiles </RaisedButton>
             </div>
         );
     }

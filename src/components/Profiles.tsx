@@ -3,6 +3,7 @@ import {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 
 import {NavigationBar} from './NavigationBar';
+import {Profile} from './Profile';
 // import * as actions from './../actions';
 
 class ProfilesComponent extends Component {
@@ -12,13 +13,11 @@ class ProfilesComponent extends Component {
                 <NavigationBar/>
                 <h1> Profiles Screen! </h1>
 
-                <ul>
-                    {
-                        this.props.profiles.map(function(profile) {
-                            return <li> {profile.name} </li>
-                        })
-                    }
-                </ul>
+                {
+                    this.props.profiles.map(function(profile) {
+                        return <Profile {...profile} />
+                    })
+                }
             </div>
         );
     }
