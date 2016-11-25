@@ -31,19 +31,16 @@ const inputParam1 = ({input}) => (
     />
 );
 
-const param2Slider = ({input}) => (
-    <div>
-        <Slider
-            defaultValue={0}
-            min={0}
-            max={10}
-            step={0.1}
-            style={{
-                width: '25%'
-            }}
-            value={input.value}
-        />
-    </div>
+const inputParam2 = ({input}) => (
+    <TextField
+        hintText="param 2"
+        floatingLabelText="Param 2"
+        type="number"
+        style={{
+            width: '25%'
+        }}
+        {...input}
+    />
 );
 
 class NewProfileForm extends React.Component {
@@ -59,11 +56,12 @@ class NewProfileForm extends React.Component {
                 <div>
                     <Field name="param1" component={inputParam1} />
                     <br/>
-                    <br/>
                 </div>
 
                 <div>
-                    <Field name="param2" component={param2Slider} value={0} />
+                    <Field name="param2" component={inputParam2} />
+                    <br/>
+                    <br/>
                 </div>
 
                 <div>
@@ -78,6 +76,36 @@ export default NewProfileForm = reduxForm({
     form: 'newProfile'
 })(NewProfileForm);
 
+
+
+
+
+
+
+
+
+
+
 /*
  - получать значение слайдера и записывать его в профиль
+
+
+
+ const param2Slider = ({input}) => (
+ <div>
+ <Slider
+ defaultValue={0}
+ min={0}
+ max={10}
+ step={0.1}
+ style={{
+ width: '25%'
+ }}
+ value={input.value}
+ />
+ </div>
+ );
+
+
+
  */

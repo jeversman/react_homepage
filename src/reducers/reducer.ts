@@ -1,5 +1,5 @@
 const initialState = {
-    profiles: [{name: 'wew', param1: 1}]
+    profiles: [{name: 'wew', param1: 1, param2: 1}]
 }
 
 function addProfile(state, profile) {

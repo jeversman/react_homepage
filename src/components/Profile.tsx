@@ -17,6 +17,9 @@ export class Profile extends Component {
 
                     <CardText>
                         Param 1: {this.props.param1}
+                        <br/>
+                        <br/>
+                        Param 2: {this.props.param2}
                     </CardText>
                 </Card>
             </div>
