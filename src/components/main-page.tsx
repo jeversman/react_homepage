@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {Component, PropTypes} from 'react';
 
-import {NavigationBar} from './NavigationBar'
+import {NavigationDrawer} from './NavigationBar'
 
 export class MainPage extends Component {
 
     render() {
         return (
             <div>
-                <NavigationBar/>
+                <NavigationDrawer/>
                 <h1> Home Page! </h1>
             </div>
         );
