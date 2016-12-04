@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {AppBar, Menu, MenuItem, Paper, Drawer} from 'material-ui';
 
-export class NavigationDrawer extends Component {
+export class NavigationBar extends Component {
 
     constructor(props) {
         super(props);
@@ -31,6 +31,6 @@ export class NavigationDrawer extends Component {
     }
 }
 
-NavigationDrawer.contextTypes = {
+NavigationBar.contextTypes = {
     router: PropTypes.object.isRequired
 };

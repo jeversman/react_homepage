@@ -1,16 +1,14 @@
-// import * as React from 'react';
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 
-import {NavigationDrawer} from './NavigationBar';
+import {NavigationBar} from './NavigationBar';
 import {Profile} from './Profile';
-// import * as actions from './../actions';
 
 class ProfilesComponent extends Component {
     render() {
         return (
             <div>
-                <NavigationDrawer/>
+                <NavigationBar/>
                 <h1> Profiles Screen! </h1>
 
                 {
