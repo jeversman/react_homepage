@@ -4,3 +4,11 @@ export function addProfile(profile) {
         profile
     }
 }
+
+export function addProfileToAccount(accountId, profileName) {
+    return {
+        type: 'ADD_PROFILE_TO_ACCOUNT',
+        accountId, 
+        profileName
+    }
+}
