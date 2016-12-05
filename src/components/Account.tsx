@@ -4,10 +4,13 @@ import {SelectField, MenuItem} from 'material-ui';
 
 export class Account extends Component {
     state = {
-        value: null
+        value: (this.props.profile !== 'none') ? this.props.profile : null
     }
 
-    handleChange = (event, index, value) => this.setState({value});
+    handleChange = (event, index, value) => {
+        this.setState({value});
+        this.props.addProfile(this.props.id, value);
+    }
 
     render() {
         return (
@@ -29,16 +32,12 @@ export class Account extends Component {
                             onChange={this.handleChange}
                         >
                             <MenuItem value={null} primaryText="None" />
-                            <MenuItem value='qqqq' primaryText="Qqqq" />
-                            <MenuItem value='wwww' primaryText="wwwww" />
 
                             {
                                 this.props.profiles.map(function(profile) {
                                     return <MenuItem value={profile.name} primaryText={profile.name} />
                                 })
                             }
-
-
 
                         </SelectField>
 
@@ -48,14 +47,3 @@ export class Account extends Component {
         );
     }
 }
-
-
-
-/*
-*
-*
-*
-*
-*
-*
-* */
