@@ -18,6 +18,7 @@ export class NavigationBar extends Component {
                 <Drawer open={this.state.open}>
                     <MenuItem onClick={() => this.handleMenuItemClick(this, 'NewProfile')}> New Profile </MenuItem>
                     <MenuItem onClick={() => this.handleMenuItemClick(this, 'Profiles')}> Profiles </MenuItem>
+                    <MenuItem onClick={() => this.handleMenuItemClick(this, 'Accounts')}> Accounts </MenuItem>
                 </Drawer>
             </div>
         );

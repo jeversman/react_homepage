@@ -1,10 +1,12 @@
 const initialState = {
-    profiles: [{name: 'wew', param1: 1, param2: 1}]
+    profiles: [{name: 'wew', param1: 1, param2: 1}],
+    accounts: [
+        {id: 1, name: 'account 1', profile: 'wew'},
+        {id: 2, name: 'account 2', profile: 'none'}
+    ]
 }
 
 function addProfile(state, profile) {
-    console.log(profile);
-
     var newState = state;
     newState.profiles = newState.profiles.concat(profile);
     return newState;
@@ -13,10 +15,7 @@ function addProfile(state, profile) {
 export default function (state = initialState, action) {
     switch (action.type) {
         case "ADD_PROFILE":
-            console.log('ADD profile in reducer');
-
             var newState = addProfile(state, action.profile);
-            console.log('NEW STATE: ', newState);
             return newState;
         default:
             console.log('unknown action type in reducer');
