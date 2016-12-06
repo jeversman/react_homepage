@@ -21,6 +21,10 @@ function addProfileToAccount(state, accountId, profileName) {
             assign({}, account, {profile: profileName}) :
             account
     });
+
+    console.log('ACTION IS WORK!!!!!');
+    console.log(accountId);
+    console.log(profileName);
     return newState;
 }
 
