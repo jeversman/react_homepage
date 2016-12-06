@@ -21,29 +21,19 @@ function addProfileToAccount(state, accountId, profileName) {
             assign({}, account, {profile: profileName}) :
             account
     });
-
-    console.log('ACTION IS WORK!!!!!');
-    console.log(accountId);
-    console.log(profileName);
     return newState;
 }
 
 export default function (state = initialState, action) {
     switch (action.type) {
         case "ADD_PROFILE":
-            var newState = addProfile(state, action.profile);
-
-            console.log('STATE STATE STATE');
-            console.log(state);
-
-            return newState;
+            return addProfile(state, action.profile);
 
         case 'ADD_PROFILE_TO_ACCOUNT':
-            var newState = addProfileToAccount(state, action.accountId, action.profileName);
-            return newState;
+            return addProfileToAccount(state, action.accountId, action.profileName);
 
         default:
-            console.log('unknown action type in reducer');
+            console.error('unknown action type in reducer');
             return state;
     }
 }

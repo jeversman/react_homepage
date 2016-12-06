@@ -22,9 +22,6 @@ class ProfilesComponent extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log('MAP MAP MAP');
-    console.log(state);
-
     return {
         profiles: state.mainReducer.profiles
     };
