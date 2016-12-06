@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {AppBar, Menu, MenuItem, Paper, Drawer} from 'material-ui';
+import {AppBar, MenuItem, Drawer} from 'material-ui';
 
 export class NavigationBar extends Component {
 

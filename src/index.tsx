@@ -7,12 +7,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-import myReducer from './reducers/reducer';
+import mainReducer from './reducers/reducer';
 
 import App from './App';
 
 const reducers = {
-    myReducer: myReducer ,
+    mainReducer : mainReducer,
     form: formReducer
 };
 

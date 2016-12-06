@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Field, reduxForm, filterProps} from 'redux-form';
+import {Field, reduxForm} from 'redux-form';
 
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -46,35 +46,3 @@ class NewProfileForm extends React.Component {
 export default NewProfileForm = reduxForm({
     form: 'newProfile'
 })(NewProfileForm);
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
- const param2Slider = ({input}) => (
- <div>
- <Slider
- defaultValue={0}
- min={0}
- max={10}
- step={0.1}
- style={{
- width: '25%'
- }}
- value={input.value}
- />
- </div>
- );
-
-
-
- */

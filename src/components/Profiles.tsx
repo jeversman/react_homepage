@@ -9,7 +9,7 @@ class ProfilesComponent extends Component {
         return (
             <div>
                 <NavigationBar/>
-                <h1> Profiles Screen! </h1>
+                <h2> Profiles Screen! </h2>
 
                 {
                     this.props.profiles.map(function(profile) {
@@ -26,7 +26,7 @@ function mapStateToProps(state) {
     console.log(state);
 
     return {
-        profiles: state.myReducer.profiles
+        profiles: state.mainReducer.profiles
     };
 }
 

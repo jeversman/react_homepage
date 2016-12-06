@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import {Field, reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 
 import {NavigationBar} from './NavigationBar';
@@ -19,7 +18,7 @@ class NewProfileComponent extends Component {
         return (
             <div>
                 <NavigationBar/>
-                <h1> New Profile Screen! </h1>
+                <h2> New Profile Screen! </h2>
     
                 <NewProfileForm onSubmit={this.props.addProfile} {...this.data} />
     

@@ -10,7 +10,7 @@ export class AccountsComponent extends Component {
         return (
             <div>
                 <NavigationBar/>
-                <h1> Accounts! </h1>
+                <h2> Accounts! </h2>
 
                 {
                     this.props.accounts.map((account) => {
@@ -28,8 +28,8 @@ export class AccountsComponent extends Component {
 
 function mapStateToProps(state) {
     return {
-        accounts: state.myReducer.accounts,
-        profiles: state.myReducer.profiles
+        accounts: state.mainReducer.accounts,
+        profiles: state.mainReducer.profiles
     };
 }
 

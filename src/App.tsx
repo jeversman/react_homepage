@@ -1,11 +1,11 @@
-import * as React from 'react';
-import {Router, Route, hashHistory, Link, Redirect} from 'react-router';
+import React, {Component} from 'react';
+import {Router, Route, hashHistory, Redirect} from 'react-router';
 
 import {NewProfile} from "./components/NewProfile";
 import {Profiles} from "./components/Profiles";
 import {Accounts} from "./components/Accounts";
 
-export default class App extends React.Component {
+export default class App extends Component {
     render() {
         return (
             <div>

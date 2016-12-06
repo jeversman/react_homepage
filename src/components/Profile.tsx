@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import {Field, reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 
