@@ -6,6 +6,8 @@ import NewProfileForm from './NewProfileForm';
 
 import * as actions from './../actions';
 
+import param from './test.json';
+
 class NewProfileComponent extends Component {
 
     data: any = {params: [

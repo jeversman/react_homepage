@@ -35,6 +35,7 @@
     ]
   },
   "dependencies": {
+    "ice": "^3.6.3",
     "immutable": "^3.8.1",
     "imports-loader": "^0.6.5",
     "lodash": "^4.17.2",
